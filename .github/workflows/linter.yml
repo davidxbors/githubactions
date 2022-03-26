@@ -1,9 +1,11 @@
 name: Linter
 
 on:
+  push:
+    branches-ignore: [master, main]
   pull_request:
     branches: [main]
-    - types: opened, edited
+    types: opened, edited
 
 jobs:
   build:
