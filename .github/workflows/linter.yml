@@ -5,7 +5,7 @@ on:
     branches-ignore: [master, main]
   pull_request:
     branches: [main]
-    types: "opened", "edited"
+    types: opened, edited
 
 jobs:
   build:
@@ -24,6 +24,7 @@ jobs:
         env:
           # Don't check already existent files
           VALIDATE_ALL_CODEBASE: false
+	  VALIDATE_ACTIONS: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   markdown-lint:
