@@ -31,9 +31,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: markdownlint-cli
-        uses: nosborn/github-action-markdown-cli@v3.0.1
+      - name: malus-markdown-linter
+        uses: davidxbors/github-action-markdown-cli@v1.0.1
         with:
           files: .
-          config_file: .github/workflows/config/config.json
-          rules: .github/workflows/rules/rules.js
+          config_file: /config/config.json
+          rules: /rules/rules.js
