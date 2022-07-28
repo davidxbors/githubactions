@@ -27,9 +27,13 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   markdown-lint:
-    - name: markdownlint-cli
-      uses: nosborn/github-action-markdown-cli@v3.0.1
-      with:
-        files: .
-        config_file: ./config/config.json
-        rules: ./rules/rules.js
+    name: Markdown Linter
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: markdownlint-cli
+        uses: nosborn/github-action-markdown-cli@v3.0.1
+        with:
+          files: .
+          config_file: ./config/config.json
+          rules: ./rules/rules.js
