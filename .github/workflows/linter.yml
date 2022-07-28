@@ -32,7 +32,7 @@ jobs:
 
     steps:
       - name: malus-markdown-linter
-        uses: davidxbors/github-action-markdown-cli@v1.0.1
+        uses: davidxbors/github-action-markdown-cli@v1.0.2
         with:
           files: .
           config_file: /config/config.json
