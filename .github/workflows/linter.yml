@@ -5,11 +5,11 @@ on:
     branches-ignore: [master, main]
   pull_request:
     branches: [main]
-    types: opened, edited
+    types: "opened", "edited"
 
 jobs:
   build:
-    name: Python Linter
+    name: Super Linter
     runs-on: ubuntu-latest
 
     steps:
