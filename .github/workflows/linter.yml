@@ -26,3 +26,16 @@ jobs:
 	  VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+	  
+  markdown-lint:
+    name: Lint changelog file
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Lint changelog file
+      uses: docker://avtodev/markdown-lint:v1 # fastest way
+      with:
+        rules: './rules/rules.js'
+        config: './config/changelog.json'
