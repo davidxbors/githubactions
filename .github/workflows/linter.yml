@@ -5,6 +5,7 @@ on:
     branches-ignore: [master, main]
   pull_request:
     branches: [main]
+    types: opened, edited
 
 jobs:
   build:
@@ -28,7 +29,7 @@ jobs:
   markdown-lint:
     name: Markdown Linter
     uses: nosborn/github-action-markdown-cli@v3.0.1
-      with:
-        files: .
-          config_file: config/config.json
-          rules: rules/rules.js
+    with:
+      files: .
+      config_file: config/config.json
+      rules: rules/rules.js
