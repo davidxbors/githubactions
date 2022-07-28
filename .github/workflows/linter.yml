@@ -24,7 +24,7 @@ jobs:
         env:
           # Don't check already existent files
           VALIDATE_ALL_CODEBASE: false
-          VALIDATE_ACTIONS: false
+          VALIDATE_GITHUB_ACTIONS: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   markdown-lint:
