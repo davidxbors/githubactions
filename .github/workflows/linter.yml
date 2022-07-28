@@ -35,5 +35,5 @@ jobs:
         uses: nosborn/github-action-markdown-cli@v3.0.1
         with:
           files: .
-          config_file: ./config/config.json
-          rules: ./rules/rules.js
+          config_file: .github/workflows/config/config.json
+          rules: .github/workflows/rules/rules.js
