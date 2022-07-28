@@ -26,7 +26,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  build:
+  markdown-lint:
     name: Markdown Linter
     uses: nosborn/github-action-markdown-cli@v3.0.1
     with:
