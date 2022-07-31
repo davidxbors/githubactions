@@ -3,5 +3,6 @@
 	"MD048": { "style": "backtick" },
 	"MD046": { "style": "fenced" },
 	"MD029": { "style": "one" },
-	"line-length": false
+	"line-length": false,
+	"no-hard-tabs": false
 }
